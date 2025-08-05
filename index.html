@@ -5,63 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Simple Homepage</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f4f8;
-      color: #333;
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+      color: #e0e6f0;
+      min-height: 100vh;
+      box-sizing: border-box;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -100px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #ff00cc88 0%, #33339900 80%);
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      animation: shine1 8s linear infinite alternate;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -120px;
+      right: -120px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #00ffea88 0%, #33339900 80%);
+      filter: blur(70px);
+      z-index: 0;
+      pointer-events: none;
+      animation: shine2 10s linear infinite alternate;
+    }
+    @keyframes shine1 {
+      0% { top: -100px; left: -100px; }
+      100% { top: 0px; left: 100px; }
+    }
+    @keyframes shine2 {
+      0% { bottom: -120px; right: -120px; }
+      100% { bottom: 0px; right: 80px; }
     }
 
     header {
-      background-color: #007acc;
-      color: white;
-      padding: 40px 20px;
+      background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+      color: #fff;
+      padding: 48px 20px 32px 20px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 24px 0 rgba(0,0,0,0.25);
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.8em;
+      font-size: 3em;
+      font-family: 'Orbitron', 'Roboto', sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 0 0 16px #00ffe7cc, 0 2px 8px #000a;
+      background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      margin-top: 18px;
+      font-size: 1.2em;
+      color: #e0e6f0;
+      text-shadow: 0 2px 8px #000a;
     }
 
     main {
       max-width: 800px;
-      margin: 40px auto;
+      margin: 48px auto 0 auto;
       padding: 0 20px;
+      position: relative;
+      z-index: 1;
     }
 
     .section {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      background: linear-gradient(120deg, #232526 0%, #414345 100%);
+      border-radius: 18px;
+      padding: 32px 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.25);
+      position: relative;
+      overflow: hidden;
+      border: 1.5px solid #3333ff44;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .section:hover {
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 16px 48px 0 #00ffea33;
+      border-color: #00ffea88;
     }
 
     h2 {
-      color: #007acc;
+      color: #ff00cc;
       margin-top: 0;
+      font-family: 'Orbitron', 'Roboto', sans-serif;
+      letter-spacing: 1px;
+      font-size: 1.5em;
+      text-shadow: 0 0 8px #00ffea88;
     }
 
     a {
-      color: #007acc;
-      font-weight: 500;
+      color: #00ffea;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+      word-break: break-all;
     }
-
     a:hover {
-      text-decoration: underline;
+      color: #ff00cc;
+      text-shadow: 0 0 8px #ff00cc88;
     }
 
     ul {
       padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.08em;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      color: #777;
+      padding: 24px 10px 18px 10px;
+      color: #aaa;
+      font-size: 1em;
+      letter-spacing: 1px;
+      background: transparent;
+      z-index: 1;
+      position: relative;
+      margin-top: 40px;
+      text-shadow: 0 2px 8px #000a;
     }
   </style>
 </head>
@@ -69,7 +158,7 @@
 
   <header>
     <h1>Welcome to My Homepage!</h1>
-    <p>AI 개발자가 꿈인 hjh님의 깃허브 페이지입니다 💻</p>
+    <p>AI 개발자가 꿈인 jeonghyun님의 깃허브 페이지입니다 💻</p>
   </header>
 
   <main>
@@ -81,7 +170,7 @@
     </div>
 
     <div class="section">
-      <h2>📁 Projects</h2>
+      <h2>🌈 Projects</h2>
       <ul>
         <li><strong>Project A</strong> – 간단한 웹사이트 만들기 (HTML/CSS/JavaScript)</li>
         <li><strong>Project B</strong> – Python으로 데이터 분석 및 시각화</li>
@@ -99,4 +188,3 @@
   </footer>
 
 </body>
-</html>
