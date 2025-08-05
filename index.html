@@ -1,54 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Simple Homepage</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f8f8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
       color: #333;
     }
-    h1 {
-      color: #2c3e50;
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: #007acc;
+      margin-top: 0;
+    }
+
     a {
       color: #007acc;
-      text-decoration: none;
+      font-weight: 500;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-top: 30px;
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to My Homepage!</h1>
+  <header>
+    <h1>Welcome to My Homepage!</h1>
+    <p>AI 개발자가 꿈인 hjh님의 깃허브 페이지입니다 💻</p>
+  </header>
 
-  <p>안녕하세요! 저는 개발자 지망생입니다. 이 페이지는 제 GitHub 페이지입니다.</p>
+  <main>
+    <div class="section">
+      <h2>🔗 My GitHub</h2>
+      <p>
+        👉 <a href="https://github.com/your-hhjhhjh" target="_blank">github.com/your-hhjhhjh</a>
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>🔗 My GitHub</h2>
-    <p><a href="https://github.com/your-hhjhhjh" target="_blank">github.com/your-username</a></p>
-  </div>
+    <div class="section">
+      <h2>📁 Projects</h2>
+      <ul>
+        <li><strong>Project A</strong> – 간단한 웹사이트 만들기 (HTML/CSS/JavaScript)</li>
+        <li><strong>Project B</strong> – Python으로 데이터 분석 및 시각화</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>📁 Projects</h2>
-    <ul>
-      <li><strong>Project A</strong> – 간단한 웹사이트 만들기</li>
-      <li><strong>Project B</strong> – Python 데이터 분석</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>📫 Contact</h2>
+      <p>Email: <a href="mailto:hjhoxo@naver.com">hjhoxo@naver.com</a></p>
+    </div>
+  </main>
 
-  <div class="section">
-    <h2>📫 Contact</h2>
-    <p>Email: hjhoxo@naver.com</p>
-  </div>
+  <footer>
+    © 2025 hjh. All rights reserved.
+  </footer>
 
 </body>
 </html>
